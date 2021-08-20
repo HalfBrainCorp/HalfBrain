@@ -1,0 +1,382 @@
+{% load static %}
+
+<link
+    rel="stylesheet"
+    type="text/css"
+    href="{%  static 'home/css/bootstrap.css' %}"
+    href="{%  static 'home/css/style.css' %}"
+    />
+
+<style>
+html {
+    overflow: hidden;
+}
+body {
+    margin: 0;
+    color: #ffffff;
+    background: black;
+    height: 100vh;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+.parallax-wrapper {
+    width: 100vw;
+    height:100vh;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+}
+.parallax-wrapper::before {
+    content:"";
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left:0;
+    background-image: url("https://cdn.discordapp.com/attachments/435794183819624458/871797884482367488/unknown.png");
+    position: absolute;
+    z-index: -1;
+    transform:translateZ(-1px) scale(2);
+}
+
+.background-slide{
+    width: 100vw;
+    height:100vh;
+    background: url("https://wallpaperaccess.com/full/35589.jpg");
+    background-repeat: repeat;
+    z-index: 2;
+    position: relative;
+}
+
+
+
+
+.parallax-wrapper2 {
+    width: 100vw;
+    height:100vh;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+}
+.parallax-wrapper2::before {
+    content:"";
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://media.istockphoto.com/photos/chaotic-black-low-poly-surface-abstract-3d-render-picture-id944880340?k=6&m=944880340&s=170667a&w=0&h=DiiEuvKhvKAF7UrTNvtehO0kwgp3kfPmQMJk1x5u2Lo=");
+
+    position: absolute;
+    z-index: -1;
+    transform:translateZ(-1px) scale(2);
+    background-repeat: repeat;
+}
+
+.background-slide-2{
+    width: 100vw;
+    height:100vh;
+    background-image: url("https://4k-wallpapers.net/uploads/posts/2021-02/medium/1613500799_mclaren-artura-concept-car-silhouette-black.jpg");
+    z-index: 2;
+    position: relative;
+}
+
+
+.mask-custom {
+    backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.35);
+    width:100%;
+    height:100%;
+}
+.mask-custom2 {
+    backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.6);
+    width:100%;
+    height:100%;
+}
+
+.container1{
+    background: url("https://wallpaperaccess.com/full/35589.jpg");
+    position: absolute;
+    top: 25%;
+    left: 15%;
+}
+.container2{
+    position: absolute;
+    top: 25%;
+    left: 15%;
+}
+.divs {
+    display: inline-block;
+    padding: 25px;
+    margin: 20px;
+}
+
+.div-2 {
+
+    margin-top: 3%;
+    padding: 50px;
+    background: #313131;
+    border-radius: 15px;
+    min-width: 400px;
+    max-height: 425px;
+    max-width: 400px;
+    float: right:
+}
+.div-6 {
+
+    margin-top: 3%;
+    padding: 50px;
+    background: #313131;
+    border-radius: 15px;
+    min-width: 400px;
+    max-height: 425px;
+    max-width: 400px;
+    float: right:
+}
+.div-1 {
+
+    float: left;
+    width: 800px;
+    height:465px;
+    background:red;
+    background-image: url("https://cdn.discordapp.com/attachments/435794183819624458/873602931981713458/EKiathnVAAAG9fn.png");
+    background-size: 800px;
+    background-repeat: no-repeat;
+
+}
+
+.div-3 {
+
+    float: left;
+    width: 800px;
+    height:450px;
+    background:red;
+    background-image: url("https://hackernoon.com/hn-images/1*AqNklmVHdflXU4aDbIAzAQ.png");
+    background-size: 800px;
+    background-repeat: no-repeat;
+
+}
+.div-5 {
+    width: 800px;
+    height:400px;
+    background:red;
+    background-image: url("https://cdn.discordapp.com/attachments/435794183819624458/874704088426754068/image0.png");
+    background-size: 800px;
+    background-repeat: no-repeat;
+    float: right:
+}
+.div-4 {
+    margin-top: 3%;
+    float: left;
+    padding: 50px;
+    background: #313131;
+    border-radius: 15px;
+    min-width: 400px;
+    max-height: 425px;
+    max-width: 400px;
+
+}
+@media screen and (max-width: 400px) {
+    .divs {
+        display: block;
+        margin: 0 auto;
+    }
+    .background-slide{
+        height:175vh;
+    }
+    .parallax-wrapper2{
+        height:175vh;
+    }
+    .background-slide-2{
+
+        height: 175vh;
+    }
+
+}
+@media screen and (max-width: 1500px) {
+    .background-slide{
+        height:175vh;
+    }
+    .parallax-wrapper2{
+        height:175vh;
+    }
+    .background-slide-2{
+        height: 175vh;
+    }
+}
+
+</style>
+
+<script>
+    var nav = document.querySelector('nav')
+
+    window.addEventListener('scroll', function(){
+        if(window.pageYOffset >= 100)
+            nav.classList.add('bg-dark', 'shadow');
+        else
+            nav.classList.remove('bg-dark', 'shadow');
+    });
+</script>
+
+<html lang="en">
+<title>Home</title>
+
+
+<header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3" >
+        <div class="container">
+            <a class="navbar-brand" href="{%  url 'index' %}">Half Brain</a>
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="{%  url 'index' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="{%  url 'about' %}">About us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="{%  url 'projects' %}">Projects</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link text-white" href="{%  url 'test' %}">Finance</a>
+                </li>
+              </ul>
+
+        </div>
+    </nav>
+</header>
+
+
+
+<body>
+    <div class="parallax-wrapper">
+        <div class="mask mask-custom">
+            <div class="d-flex w-100 vh-100 d-flex justify-content-center align-items-center">
+                <div class="content text-center"></div>
+                <p><h1>Half Brain Corp.</h1></p>
+            </div>
+        </div>
+    </div>
+    <div class="background-slide">
+        <div class="container1">
+            <div class="divs div-1"></div>
+            <div class="divs div-2">
+                <p><strong>Bot Market Crashing</strong><br>
+                    Recently due to popular sneaker websites shifting away from first come first serve,
+                    they have changed the game in order to prevent botting on their websites. Most
+                    popular sites such as yeezy supply, adidas and Nike have all opened waiting rooms.
+                    The waiting room is open for an hour, whoever is in the waiting room has a random
+                    chance to get the shoes, how fast you join the waiting room is not a factor. Due to
+                    these changes the majority of current sneaker bots have lost over half their value.
+               </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="parallax-wrapper2">
+                <div class="mask mask-custom2">
+        <div class="container2">
+            <div class="divs div-5"></div>
+            <div class="divs div-4">
+                <p><strong>Overview</strong><br>
+                    To solve this problem we have completely changed the project to be an Nft Racing site.
+                    Players can purchase cars from the website, which are ntfs and can use them to race in
+                    our game. 10 players will chip in a small fee and the 1st, 2nd and 3rd place winners will
+                    receive their part of the prize pool. All payments will be made using Ethereum or our own
+                    <ABBR title="Half Brain Corp">HBC</ABBR> Crypto. See more details on our
+                    <a class="text-white" href="{%  url 'projects' %}">Projects page.</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <div class="background-slide-2">
+        <div class="container2">
+            <div class="divs div-3"></div>
+            <div class="divs div-6">
+                <p><strong>Payment</strong><br>
+                    A cryptocurrency is a digital or virtual currency that is secured
+                    by the blockchain, which makes it nearly impossible to counterfeit
+                    or double-spend. Many cryptocurrencies are decentralized networks
+                    based on blockchain technology, a distributed ledger enforced by a
+                    disparate network of computers. NFT also known as non-fungible-token
+                    is a way that virtual paintings and basketball clips are being stored and sold,
+                    <a class="text-white" href="{%  url 'test' %}">see more.</a>
+               </p>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-white">
+      <!-- Grid container -->
+      <div class="container p-4">
+
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a class="img" href="https://www.facebook.com/profile.php?id=100071869056288" target="_blank" role="button"><i class="fab fa-facebook-f"></i>
+            <img src="{% static 'img/facebook2.png' %}" alt="" width="30" height="30">
+          </a>
+
+          <!-- Google -->
+          <a class="img" href="https://g.page/r/CSCWOOg0FvGTEAE" target="_blank" role="button"><i class="fab fa-google"></i>
+          <img src="{% static 'img/google.png' %}" alt="" width="30" height="30">
+          </a>
+
+          <!-- Pinterest -->
+          <a class="img" href="https://www.pinterest.com/halfbraincorp" target="black" role="button"><i class="fab fa-pinterest-in"></i>
+          <img src="{% static 'img/pinterest.png' %}" alt="" width="30" height="30">
+          </a>
+
+          <!-- Instagram -->
+          <a class="img" href="https://www.instagram.com/halfbraincorp/" target="black" role="button"><i class="fab fa-instagram"></i>
+          <img src="{% static 'img/instagram.png' %}" alt="" width="30" height="30">
+          </a>
+
+          <!-- Twitter -->
+          <a class="img"  href="https://twitter.com/HalfBrainCorp" target="_blank" role="button"><i class="fab fa-twitter"></i>
+           <img src="{% static 'img/twitter.png' %}" alt="" width="30" height="30">
+          </a>
+
+          <!-- Github -->
+          <a class="img" href="https://github.com/Dirty-Dish/HalfBrainWebsite2" target="black" role="button"><i class="fab fa-GitHub"></i>
+          <img src="{% static 'img/GitHub.png' %}" alt="" width="30" height="30">
+          </a>
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Form -->
+
+        <!-- Section: Form -->
+
+        <!-- Section: Text -->
+        <section class="mb-4">
+          <p>
+            Half Bain is a partnership firm operated by Andrew Nagda & Thomas Morrell in Worcester county of Massachusetts. We have all sorts of products and services for sale with the goal to satisfy all customers with whatever service or product needed.
+          </p>
+        </section>
+        <!-- Section: Text -->
+
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2020 Copyright:
+        <a class="text-white" href="http://127.0.0.1:8000/">halfbraincorp.com</a>
+      </div>
+      <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+</body>
+</html>

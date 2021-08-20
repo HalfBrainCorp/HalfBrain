@@ -1,0 +1,206 @@
+{% load static %}
+
+<link
+    rel="stylesheet"
+    type="text/css"
+    href="{%  static 'home/css/bootstrap.css' %}"
+    href="{%  static 'home/css/style.css' %}"
+    />
+
+<style>
+html {
+    overflow: hidden;
+}
+body {
+    margin: 0;
+    color: #ffffff;
+    background: black;
+    height: 100vh;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+.parallax-wrapper2{
+    width: 100vw;
+    height:100vh;
+    background-image: url("https://www.kolpaper.com/wp-content/uploads/2020/11/1080p-Black-Screen-Wallpaper.jpg");
+    z-index: 2;
+    position: relative;
+}
+
+
+.container2{
+    position: absolute;
+    top: 25%;
+    left: 15%;
+}
+.divs {
+    display: inline-block;
+    padding: 25px;
+    margin: 20px;
+}
+
+.div-5 {
+    margin-top: 8%;
+    width: 800px;
+    height:320px;
+    background:red;
+    background-image: url("https://s15543.pcdn.co/wp-content/uploads/2018/01/Mobile_security_Business_Risk.jpg");
+    background-size: 800px;
+    background-repeat: no-repeat;
+    float: right:
+}
+.div-4 {
+    float: left;
+    padding: 50px;
+    background: #313131;
+    border-radius: 15px;
+    min-width: 400px;
+    max-height: 475px;
+    max-width: 400px;
+
+}
+
+@media screen and (max-width: 400px) {
+    .divs {
+        display: block;
+        margin: 0 auto;
+    }
+    .background-slide{
+        height:175vh;
+    }
+}
+@media screen and (max-width: 1500px) {
+    .background-slide{
+        height:175vh;
+    }
+}
+
+</style>
+
+<html lang="en">
+<title>Security</title>
+
+
+<header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3" >
+        <div class="container">
+            <a class="navbar-brand" href="{%  url 'test' %}">Back</a>
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="{%  url 'test' %}">Finance</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="{%  url 'crypto' %}">Crypto</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="{%  url 'nfts' %}">Nfts</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link text-white" href="{%  url 'trading' %}">3rd Gen Crypto</a>
+                </li>
+
+              </ul>
+
+        </div>
+    </nav>
+</header>
+
+
+
+<body>
+
+    <div class="parallax-wrapper2">
+                <div class="mask mask-custom2">
+        <div class="container2">
+            <div class="divs div-5"></div>
+            <div class="divs div-4">
+                <p><strong>Security</strong><br>
+                    We have decided to do it with crypto currencies because of the different
+                    systems, they must make it far more secure than any other bank or third-party
+                    with a middleman. Another advantage to be doing it with cryptocurrency is
+                    that the only fee that you’ll be paying is what is called a gas fee. if
+                    you were to do it through a bank or a place that holds your money you would
+                    have to pay a transaction fee or a wire fee. If you’re doing a lot of
+                    transactions back-to-back those fees will add up over time. Another massive
+                    advantage with cryptocurrency is that your transaction can’t be intercepted.
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+<footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4">
+
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="img" href="https://www.facebook.com/profile.php?id=100071869056288" target="_blank" role="button"><i class="fab fa-facebook-f"></i>
+        <img src="{% static 'img/facebook2.png' %}" alt="" width="30" height="30">
+      </a>
+
+      <!-- Google -->
+      <a class="img" href="https://g.page/r/CSCWOOg0FvGTEAE" target="_blank" role="button"><i class="fab fa-google"></i>
+      <img src="{% static 'img/google.png' %}" alt="" width="30" height="30">
+      </a>
+
+      <!-- pinterest -->
+      <a class="img" href="https://www.pinterest.com/halfbraincorp" target="black" role="button"><i class="fab fa-pinterest-in"></i>
+      <img src="{% static 'img/pinterest.png' %}" alt="" width="30" height="30">
+      </a>
+
+      <!-- Instagram -->
+      <a class="img" href="https://www.instagram.com/halfbraincorp/" target="black" role="button"><i class="fab fa-instagram"></i>
+      <img src="{% static 'img/instagram.png' %}" alt="" width="30" height="30">
+      </a>
+
+      <!-- Twitter -->
+      <a class="img"  href="https://twitter.com/HalfBrainCorp" target="_blank" role="button"><i class="fab fa-twitter"></i>
+       <img src="{% static 'img/twitter.png' %}" alt="" width="30" height="30">
+      </a>
+
+      <!-- Github -->
+      <a class="img" href="https://github.com/Dirty-Dish/HalfBrainWebsite2" target="black" role="button"><i class="fab fa-GitHub"></i>
+      <img src="{% static 'img/GitHub.png' %}" alt="" width="30" height="30">
+      </a>
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Form -->
+
+    <!-- Section: Form -->
+
+
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p>
+        Half Bain is a partnership firm operated by Andrew Nagda & Thomas Morrell in Worcester county of Massachusetts. We have all sorts of products and services for sale with the goal to satisfy all customers with whatever service or product needed.
+      </p>
+    </section>
+    <!-- Section: Text -->
+
+
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    © 2020 Copyright:
+    <a class="text-white" href="http://127.0.0.1:8000/">halfbraincorp.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+
+</body>
+</html>

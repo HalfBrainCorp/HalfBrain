@@ -1,0 +1,286 @@
+{% load static %}
+
+<link
+    rel="stylesheet"
+    type="text/css"
+    href="{%  static 'home/css/bootstrap.css' %}"
+    />
+
+<head>
+    <title>Projects</title>
+</head>
+<body>
+
+<!--Main Navigation-->
+  <header>
+    <!-- Intro settings -->
+    <style>
+      #intro {
+        /* Margin to fix overlapping fixed navbar */
+        margin-top: 58px;
+      }
+
+      @media (max-width: 991px) {
+        #intro {
+          /* Margin to fix overlapping fixed navbar */
+          margin-top: 45px;
+        }
+      }
+    </style>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="{%  url 'index' %}">Half Brain</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="mx-auto"></div>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="{%  url 'index' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="{%  url 'about' %}">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="{%  url 'projects' %}">Projects</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link text-white" href="{%  url 'test' %}">Finance</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Jumbotron -->
+    <div id="intro" class="p-5 text-center bg-light">
+        <h1 class="mb-0 h4">NFT Race Car</h1>
+    </div>
+    <!-- Jumbotron -->
+  </header>
+  <!--Main Navigation-->
+
+  <!--Main layout-->
+  <main class="mt-4 mb-5">
+    <div class="container">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-md-8 mb-4">
+          <!--Section: Post data-mdb-->
+          <section class="border-bottom mb-4">
+            <img src="https://cdn.discordapp.com/attachments/435794183819624458/873602931981713458/EKiathnVAAAG9fn.png"
+              class="img-fluid shadow-2-strong rounded-5 mb-4" alt="" />
+            <div class="row align-items-center mb-4">
+              <div class="col-lg-6 text-center text-lg-start mb-3 m-lg-0">
+              </div>
+            </div>
+
+          </section>
+          <!--Section: Post data-mdb-->
+
+          <!--Section: Text-->
+          <section>
+           <p><strong>"The Bot Market Is Crashing"</strong></p>
+            <p>
+                While doing research on the shoe bots we learned that the bot market was crashing,
+                through the summer Popular Hypebeast brands such as Yeezy Supplies, Adidas, Nike,
+                Supreme and Shopify, where all moving away from the traditional first come first
+                serve. Instead these sites were moving towards waiting rooms and giving the shoes
+                out at random. When the drop comes at 10am everyone floods into the waiting room.
+                From here the shoes are given out at random regardless of how fast you join the
+                queue. This makes botting obsolete, paired with our original doubt we've decided
+                to switch our project idea and go fourth with Nft Car Racing.
+
+            <p><strong>Nft Car Racing</strong></p>
+
+            <p>
+                When you first come to the site you will notice a few things: the shop, mechanic,
+                racing and your garage. The first thing you'll want to do when visiting the site
+                will be to make an account and buy a car. Cars will be released Once in a while
+                programmed with a top speed, name, and color. You can view your car and make
+                changes to it in your garage. Okay Great, we have our first car, Now we are able
+                to participate in races. We have two options: Create a race, or join a race. To
+                create a race you will choose an entry fee and the race distance, ¼ mile, ½ mile, 1
+                mile races. To join a race (and create) you need to pay the entry fee chosen by
+                whoever created the race. This can range from $1 to $100. The entry fees are added
+                up into the prize pool which will be split by our winners later. With 10 cars on
+                the starting line the Prize will be split between winners 1, 2 and 3. 1st place
+                will receive 70% of the prize pool, 2nd place will receive 20% and 3rd gets 10%
+                (their money back). One factor we made sure to keep in mind is hacking/cheats, in
+                order to combat this we've made there is no user interaction in the race, nothing
+                the player does can affect the outcome of the race, because of this there is no room
+                for hacks/cheats. Now we know how to buy a car, and how to race, but how can we make
+                our car faster? If we head back to the shop you will be able to find car parts, from
+                wheels to turbos to nitrous, all affecting the car in one way or another. Once you
+                have purchased the parts you can install them by sending your car to the Mechanic for
+                a small fee. While your car is with the mechanic you will not be able to use the car
+                in any races for an amount of time depending on the upgrade.
+            </p>
+            <img src="{% static 'img/race.png' %}" class="img-fluid shadow-1-strong rounded-5 mb-4" alt="" />
+
+            <p class="note note-light">
+              <strong>Note:</strong> Above is an example of what the races can look like.
+            </p><br>
+
+
+
+            <p><strong>Full Circle</strong></p>
+              Since These Cars are <a class="text-black" style="color:black;" href="{%  url 'test' %}">Nfts</a>
+              there are a limited number of them. Once all the cars have been sold they can be resold on 3rd
+              party sites such as <a class="text-black" style="color:black;" href='https://opensea.io/'
+              target='black'>opensea.io</a>, The prices on here would be set by whoever owns the <a
+              class="text-black" style="color:black;" href="{%  url 'test' %}">Nfts</a>. You can
+              purchase the cars from this site with Ethereum.
+            </p>
+
+            <p><strong>Finish Line</strong></p>
+            <p>
+                In order to make sure we get through this project at a consistent rate we have made a
+                bunch of steps in order to stay on track. Our first goal is to start with a simple game
+                such as tic-tac-toe played on two separate computers, just to make sure we have the
+                multiplayer aspect incorporated. In the beginning we will be starting as simple as red
+                car vs blue car, red cars top speed is 240mph and blue cars top speed is 100mph. Since
+                the deciding factor of which cars wins the race is top speed the red car would obviously
+                win. With these small steps we hope to have a working version of the game without any
+                money involved by the end of the school year.
+
+            </p>
+          </section>
+          <!--Section: Text-->
+
+
+
+          <!--Section: Reply-->
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-4 mb-4">
+          <!--Section: Sidebar-->
+          <section class="sticky-top" style="top: 80px;">
+            <!--Section: Ad-->
+            <section class="text-center border-bottom pb-4 mb-4">
+              <div class="bg-image hover-overlay ripple mb-4">
+                <img
+                  src="https://cdn.discordapp.com/attachments/435794183819624458/874704088426754068/image0.png"
+                  class="img-fluid" />
+                <a href="https://cdn.discordapp.com/attachments/435794183819624458/874704088426754068/image0.png" target="_blank">
+                  <div class="mask" style="background-color: rgba(57, 192, 237, 0.2);"></div>
+                </a>
+              </div>
+              <h5>90's Acura NSX</h5>
+
+              <p>
+                This is one example as to what the nft cars could potentially look like in the future. Nothing complex, just simple drawings resembling the car.
+              </p>
+              <a role="button" class="btn btn-primary" href="https://www.pinterest.com/halfbraincorp"
+                target="_blank">See More<i class="fas fa-download ms-2"></i></a>
+            </section>
+            <!--Section: Ad-->
+
+            <section class="text-center  pb-4 mb-4">
+              <div class="bg-image hover-overlay ripple mb-4">
+                <img
+                  src="https://cdn.discordapp.com/attachments/435794183819624458/871223074752712764/image0.jpg"
+                  class="img-fluid" />
+                <a href="https://pin.it/QPY8RDG" target="_blank">
+                  <div class="mask" style="background-color: rgba(57, 192, 237, 0.2);"></div>
+                </a>
+              </div>
+              <h5>Half Brain Logo</h5>
+              <p>
+                This is the current design we have come up with for our company Logo, Half Brain.
+              </p>
+              <a role="button" class="btn btn-primary" href="https://www.pinterest.com/halfbraincorp"
+                target="_blank">See More<i class="fas fa-download ms-2"></i></a>
+            </section>
+
+          </section>
+          <!--Section: Sidebar-->
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+  </main>
+  <!--Main layout-->
+
+ <!-- Footer -->
+<footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4">
+
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="img" href="https://www.facebook.com/profile.php?id=100071869056288" target="_blank" role="button"><i class="fab fa-facebook-f"></i>
+        <img src="{% static 'img/facebook2.png' %}" alt="" width="30" height="30">
+      </a>
+
+      <!-- Google -->
+      <a class="img" href="https://g.page/r/CSCWOOg0FvGTEAE" target="_blank" role="button"><i class="fab fa-google"></i>
+      <img src="{% static 'img/google.png' %}" alt="" width="30" height="30">
+      </a>
+
+      <!-- pinterest -->
+      <a class="img" href="https://www.pinterest.com/halfbraincorp" target="black" role="button"><i class="fab fa-pinterest-in"></i>
+      <img src="{% static 'img/pinterest.png' %}" alt="" width="30" height="30">
+      </a>
+
+      <!-- Instagram -->
+      <a class="img" href="https://www.instagram.com/halfbraincorp/" target="black" role="button"><i class="fab fa-instagram"></i>
+      <img src="{% static 'img/instagram.png' %}" alt="" width="30" height="30">
+      </a>
+
+      <!-- Twitter -->
+      <a class="img"  href="https://twitter.com/HalfBrainCorp" target="_blank" role="button"><i class="fab fa-twitter"></i>
+       <img src="{% static 'img/twitter.png' %}" alt="" width="30" height="30">
+      </a>
+
+      <!-- Github -->
+      <a class="img" href="https://github.com/Dirty-Dish/HalfBrainWebsite2" target="black" role="button"><i class="fab fa-GitHub"></i>
+      <img src="{% static 'img/GitHub.png' %}" alt="" width="30" height="30">
+      </a>
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Form -->
+
+    <!-- Section: Form -->
+
+
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p>
+        Half Bain is a partnership firm operated by Andrew Nagda & Thomas Morrell in Worcester county of Massachusetts. We have all sorts of products and services for sale with the goal to satisfy all customers with whatever service or product needed.
+      </p>
+    </section>
+    <!-- Section: Text -->
+
+
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    © 2020 Copyright:
+    <a class="text-white" href="http://127.0.0.1:8000/">halfbraincorp.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+    </body>
+</html>
